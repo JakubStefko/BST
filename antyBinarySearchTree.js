@@ -50,6 +50,31 @@ class AntyBinarySearchTree extends BinaryTree {
     }
   }
 
+  search(value) {
+    if (this.isEmpty()) { return 'Empty tree' }
+    else {
+      let current = this.root
+
+      while (true) { // yes, i know that it is a bad idea, but i don't see a point in creating new variable
+        if (current.key < value) {
+          if (typeof current.left !== 'undefined') {
+            current = current.left
+          } else {
+            return 'Not in tree'
+          }
+        } else if (current.key === value) {
+          return current
+        } else {
+          if (typeof current.right !== 'undefined') {
+            current = current.right
+          } else {
+            return 'Not in tree'
+          }
+        }
+      }
+    }
+  }
+
   showAll() {
     if (this.isEmpty()) { console.log('BinarySearchTree is empty') }
     else { console.log('Binary Search Tree: ', this.root) }

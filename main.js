@@ -23,11 +23,23 @@ start.addEventListener('click', () => {
   treeDumbFill(binarySearchTree)
   treeDumbFill(antyBinarySearchTree)
 
-  binaryTree.showAll()
-  binarySearchTree.showAll()
-  antyBinarySearchTree.showAll()
+  // binaryTree.showAll()
+  // binarySearchTree.showAll()
+  // antyBinarySearchTree.showAll()
 
-  console.log('Is our Binary Tree a BST: ', isBST(binaryTree))
-  console.log('Is our Binary Search Tree a BST: ', isBST(binarySearchTree))
-  console.log('Is our Anty Binary Search Tree a BST: ', isBST(antyBinarySearchTree))
+  // console.log('Is our Binary Tree a BST: ', isBST(binaryTree))
+  // console.log('Is our Binary Search Tree a BST: ', isBST(binarySearchTree))
+  // console.log('Is our Anty Binary Search Tree a BST: ', isBST(antyBinarySearchTree))
+
+  console.log(binarySearchTree.min())
+  console.log(binarySearchTree.max())
+
+  console.log(antyBinarySearchTree.min())
+  console.log(antyBinarySearchTree.max())
+
+  console.log(binarySearchTree.search(4))
+  console.log(antyBinarySearchTree.search(4))
+
+  console.log(binarySearchTree.search(10))
+  console.log(antyBinarySearchTree.search(10))
 })
