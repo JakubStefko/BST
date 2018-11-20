@@ -35,23 +35,23 @@ class BinaryTree {
   height() {
     if (this.isEmpty()) { return 0 }
     else {
-      let height = 1
+      let h = 1
       let nodeList = []
       let current
-      nodeList.push({node: this.root, height: height})
+      nodeList.push({node: this.root, height: h})
       do {
         current = nodeList.shift()
-        if (current.height > height) {
-          height = current.height
+        if (current.height > h) {
+          h = current.height
         }
-        if (typeof current.left !== 'undefined') {
-          nodeList.push({ node: current.left, height: current.height + 1 })
-        } else if (typeof current.right !== 'undefined') {
-          nodeList.push({ node: current.right, height: current.height + 1 })
+        if (typeof current.node.left !== 'undefined') {
+          nodeList.push({ node: current.node.left, height: current.height + 1 })
+        } else if (typeof current.node.right !== 'undefined') {
+          nodeList.push({ node: current.node.right, height: current.height + 1 })
         }
       } while( nodeList.length )
+      return h
     }
-    return height
   }
 
   getLeft(node) {

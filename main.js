@@ -4,5 +4,6 @@ start.addEventListener('click', () => {
   tree.add(2)
   console.log(tree.height())
   tree.add(3)
+  console.log(tree.height())
   tree.showAll()
 })
