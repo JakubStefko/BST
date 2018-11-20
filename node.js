@@ -1,7 +1,7 @@
 class Node {
-  constructor(key, left = null, right = null) {
+  constructor(key) {
     this.key = key
-    this.left = left
-    this.right = right
+    this.left = undefined
+    this.right = undefined
   }
 }
