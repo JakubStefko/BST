@@ -17,17 +17,13 @@ class BinaryTree {
       let contain = false
       
       while (!contain) {
-        if (current.key > key) {
-          if (typeof current.left === 'undefined') {
-            current.left = node
-            contain = true
-          } else { current = current.left }
-        } else {
-          if (typeof current.right === 'undefined') {
-            current.right = node
-            contain = true
-          } else { current = current.right }
-        }
+        if (typeof current.left === 'undefined') {
+          current.left = node
+          contain = true
+        } else if (typeof current.right === 'undefined') {
+          current.right = node
+          contain = true
+        } else { current = Math.round(Math.random()) ? current.left : current.right }
       }
     }
   }
